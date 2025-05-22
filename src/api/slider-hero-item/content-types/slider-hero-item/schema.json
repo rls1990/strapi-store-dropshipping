@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "slider_hero_items",
+  "info": {
+    "singularName": "slider-hero-item",
+    "pluralName": "slider-hero-items",
+    "displayName": "Slider Hero Item",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "string"
+    },
+    "color": {
+      "type": "customField",
+      "regex": "^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$",
+      "customField": "plugin::color-picker.color"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    }
+  }
+}
