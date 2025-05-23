@@ -396,6 +396,7 @@ export interface ApiContactContact extends Struct.CollectionTypeSchema {
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    url: Schema.Attribute.String;
     value: Schema.Attribute.String & Schema.Attribute.Required;
   };
 }
@@ -556,8 +557,6 @@ export interface ApiSliderHeroItemSliderHeroItem
     draftAndPublish: true;
   };
   attributes: {
-    color: Schema.Attribute.String &
-      Schema.Attribute.CustomField<'plugin::color-picker.color'>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
